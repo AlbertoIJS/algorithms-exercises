@@ -11,15 +11,10 @@
 */
 
 function bubbleSort(nums) {
-  let change = true;
-  while (change)
+  for (let j = 0; j < nums.length; j++)
     for (let i = 0; i < nums.length; i++)
-      if (nums[i] > nums[i + 1]) {
-        change = true;
-
+      if (nums[i] > nums[i + 1])
         [nums[i], nums[i + 1]] = [nums[i + 1], nums[i]];
-      } else
-        change = false;
 
   return nums;
 }
